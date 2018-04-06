@@ -1,6 +1,9 @@
 <DnaLibrary Name="SIT.ExcelAnalytics Add-In" RuntimeVersion="v4.0">
   <ExternalLibrary Path="SIT.ExcelAnalytics.dll" ExplicitExports="false" LoadFromBytes="true" Pack="true" />
-  
+  <ExternalLibrary Path="ExcelDna.Registration.dll" ExplicitRegistration="true" LoadFromBytes="true" Pack="true" />
+  <ExternalLibrary Path="ExcelDna.Registration.FSharp.dll" ExplicitRegistration="true" LoadFromBytes="true" Pack="true" />
+  <Reference Path="ExcelDna.IntelliSense.dll" Pack="true" />
+  <Reference Path="FSharp.Core.dll" Pack="true" />
   <!-- 
        The RuntimeVersion attribute above allows two settings:
        * RuntimeVersion="v2.0" - for .NET 2.0, 3.0 and 3.5
