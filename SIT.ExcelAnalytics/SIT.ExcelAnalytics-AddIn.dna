@@ -1,5 +1,5 @@
 <DnaLibrary Name="SIT.ExcelAnalytics Add-In" RuntimeVersion="v4.0">
-  <ExternalLibrary Path="SIT.ExcelAnalytics.dll" ExplicitExports="false" LoadFromBytes="true" Pack="true" />
+  <ExternalLibrary Path="SIT.ExcelAnalytics.dll" ExplicitExports="false" LoadFromBytes="true" Pack="true" ExplicitRegistration='true'/>
   <ExternalLibrary Path="ExcelDna.Registration.dll" ExplicitRegistration="true" LoadFromBytes="true" Pack="true" />
   <ExternalLibrary Path="ExcelDna.Registration.FSharp.dll" ExplicitRegistration="true" LoadFromBytes="true" Pack="true" />
   <Reference Path="ExcelDna.IntelliSense.dll" Pack="true" />
