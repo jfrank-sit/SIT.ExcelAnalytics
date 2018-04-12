@@ -1,2 +1,4 @@
 # SIT.ExcelAnalytics
-Excel addin for simple financial UDFs written in F#
+My first Github project!
+
+An Excel addin for simple financial analytic UDFs written in F#. Not much here yet.
