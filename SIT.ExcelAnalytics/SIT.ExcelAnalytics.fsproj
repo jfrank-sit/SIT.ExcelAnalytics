@@ -55,6 +55,7 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="analytics.fs" />
     <Compile Include="xlfunctions.fs" />
     <Compile Include="register.fs" />
     <None Include="Script.fsx" />
