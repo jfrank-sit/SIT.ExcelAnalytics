@@ -2,18 +2,22 @@
 open System
 
 type ReturnStatistics(retData) =
+    let totalReturn data = Array.fold (fun retAcc periodRet -> retAcc * (1. + periodRet) ) 1. data - 1.
+    let periodReturn data n = (1. + (totalReturn data)) ** (n / float data.Length) - 1.
     
-    member x.TotalReturn = 
+    //will handle errors more robustly in future
+    let ifErrNone func =
         try
-            Some (Array.fold (fun retAcc periodRet -> retAcc * (1. + periodRet) ) 1. retData - 1.)
-        with 
+            Some func
+        with
         | _ -> None
 
-    member x.AnnualReturn nPerYear = 
-        match x.TotalReturn with 
-        | Some tr ->  Some ((1. + tr) ** (nPerYear / float retData.Length) - 1.)
-        | None -> None
+    member x.TotalReturn = 
+        ifErrNone (totalReturn retData)        
 
-    member x.GeoMeanReturn =
-        x.AnnualReturn 1.
+    member x.AnnualReturn nPerYear = 
+        ifErrNone (periodReturn retData nPerYear)        
+
+    member x.GeoAvgReturn =
+        ifErrNone (periodReturn retData 1.)
         
