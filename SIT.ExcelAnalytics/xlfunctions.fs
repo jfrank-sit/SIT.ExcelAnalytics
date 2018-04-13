@@ -1,7 +1,6 @@
 ﻿namespace SIT.Analytics
 open System
 open ExcelDna.Integration
-open System.ComponentModel
     
 type xlStatisticFunctions =   
 
