@@ -9,7 +9,7 @@ type ReturnStatistics(retData) =
     let ifErrNone func =
         try
             Some func
-        with
+        with 
         | _ -> None
 
     member x.TotalReturn = 
