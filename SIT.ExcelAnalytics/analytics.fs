@@ -2,9 +2,11 @@
 open System
 
 
+///Statistic type
 type Statistic =
     | StatVal
     | Fail of string
+
 type ReturnStatistics(retData) =
     let totalReturn data = Array.fold (fun retAcc periodRet -> retAcc * (1. + periodRet) ) 1. data - 1.
     let periodReturn data n = (1. + (totalReturn data)) ** (n / float data.Length) - 1.
